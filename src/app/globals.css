@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F8FAFC;
+  --foreground: #0F172A;
+  --card: #ffffff;
+  --card-border: #E2E8F0;
+  --card-border-subtle: #F1F5F9;
+  --sidebar-bg: #ffffff;
+  --sidebar-border: #E2E8F0;
+  --muted: #64748B;
+  --muted-bg: #F1F5F9;
+  --input-bg: #F8FAFC;
+  --input-border: #E2E8F0;
+  --input-text: #334155;
+  --input-placeholder: #94A3B8;
+  --upload-bg: #FAFAFA;
+  --upload-border: #E2E8F0;
+  --upload-footer-bg: #F1F5F9;
+  color-scheme: light;
+}
+
+.dark {
+  --background: #0D1117;
+  --foreground: #E2E8F0;
+  --card: #161B22;
+  --card-border: #30363D;
+  --card-border-subtle: #21262D;
+  --sidebar-bg: #161B22;
+  --sidebar-border: #30363D;
+  --muted: #8B949E;
+  --muted-bg: #21262D;
+  --input-bg: #0D1117;
+  --input-border: #30363D;
+  --input-text: #C9D1D9;
+  --input-placeholder: #484F58;
+  --upload-bg: #161B22;
+  --upload-border: #30363D;
+  --upload-footer-bg: #21262D;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-outfit), 'Outfit', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+/* ── Backgrounds ─────────────────────────────────────────── */
+.dark .bg-white           { background-color: var(--card) !important; }
+.dark .bg-slate-50        { background-color: var(--muted-bg) !important; }
+.dark .bg-slate-100       { background-color: #21262D !important; }
+.dark .bg-slate-200       { background-color: #30363D !important; }
+
+/* Amber tinted surfaces */
+.dark .bg-amber-50        { background-color: #1C1400 !important; }
+.dark .bg-amber-100       { background-color: #231900 !important; }
+
+/* Status surfaces */
+.dark .bg-emerald-50      { background-color: #0D2818 !important; }
+.dark .bg-red-50          { background-color: #2D0F0F !important; }
+
+/* Hover states */
+.dark .hover\:bg-slate-50:hover  { background-color: #1C2128 !important; }
+.dark .hover\:bg-slate-100:hover { background-color: #21262D !important; }
+.dark .hover\:bg-slate-200:hover { background-color: #30363D !important; }
+.dark .hover\:bg-amber-600:hover { background-color: #B45309 !important; }
+.dark .active\:opacity-70:active { opacity: 0.7; }
+
+/* ── Borders ──────────────────────────────────────────────── */
+.dark .border-slate-100   { border-color: var(--card-border-subtle) !important; }
+.dark .border-slate-200   { border-color: var(--card-border) !important; }
+.dark .border-amber-200   { border-color: #78350F !important; }
+.dark .border-amber-100   { border-color: #451A00 !important; }
+.dark .border-emerald-200 { border-color: #064E2B !important; }
+.dark .border-red-200     { border-color: #7F1D1D !important; }
+.dark .border-white       { border-color: #30363D !important; }
+
+/* ── Text ────────────────────────────────────────────────── */
+.dark .text-slate-900     { color: #E2E8F0 !important; }
+.dark .text-slate-800     { color: #CBD5E1 !important; }
+.dark .text-slate-700     { color: #94A3B8 !important; }
+.dark .text-slate-600     { color: #8B949E !important; }
+.dark .text-slate-500     { color: #6E7681 !important; }
+.dark .text-slate-400     { color: #484F58 !important; }
+.dark .text-slate-300     { color: #30363D !important; }
+.dark .text-amber-700     { color: #FCD34D !important; }
+.dark .text-amber-600     { color: #FBBF24 !important; }
+.dark .text-emerald-600   { color: #34D399 !important; }
+.dark .text-red-600       { color: #F87171 !important; }
+
+/* Hover text */
+.dark .hover\:text-slate-900:hover { color: #F1F5F9 !important; }
+.dark .hover\:text-slate-800:hover { color: #E2E8F0 !important; }
+.dark .hover\:text-slate-600:hover { color: #94A3B8 !important; }
+.dark .hover\:text-amber-700:hover { color: #FDE68A !important; }
+.dark .hover\:text-red-500:hover   { color: #F87171 !important; }
+
+/* ── Inputs ──────────────────────────────────────────────── */
+.dark input[type="text"],
+.dark input[type="email"],
+.dark input[type="number"],
+.dark input[type="password"],
+.dark input[type="search"],
+.dark select,
+.dark textarea {
+  background-color: var(--input-bg) !important;
+  border-color: var(--input-border) !important;
+  color: var(--input-text) !important;
+}
+.dark input::placeholder,
+.dark textarea::placeholder { color: var(--input-placeholder) !important; }
+.dark input:focus,
+.dark select:focus,
+.dark textarea:focus {
+  background-color: #161B22 !important;
+  border-color: #D97706 !important;
+}
+
+/* ── kbd / shortcut chips ────────────────────────────────── */
+.dark kbd {
+  background-color: #21262D !important;
+  border-color: #30363D !important;
+  color: #8B949E !important;
+}
+
+/* ── Skeleton / pulse ────────────────────────────────────── */
+.dark .animate-pulse { background-color: #21262D !important; }
+.dark .bg-slate-100.animate-pulse { background-color: #21262D !important; }
+
+/* ── Shadow ──────────────────────────────────────────────── */
+.dark .shadow-sm { box-shadow: 0 1px 3px rgba(0,0,0,0.4) !important; }
+
+/* ── Sidebar ─────────────────────────────────────────────── */
+.dark nav {
+  background-color: var(--sidebar-bg) !important;
+  border-color: var(--sidebar-border) !important;
+}
+
+/* Active nav item */
+.dark .bg-amber-50.border-l-2.border-amber-500 {
+  background-color: #1C1400 !important;
+}
+
+/* ── Scrollbar ───────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
+.dark ::-webkit-scrollbar-thumb { background: #30363D; }
+.dark ::-webkit-scrollbar-thumb:hover { background: #484F58; }
+
+/* ── Focus ring ──────────────────────────────────────────── */
+*:focus-visible {
+  outline: 2px solid #D97706;
+  outline-offset: 2px;
+}
+
+/* ── Reduced motion ──────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  body { transition: none; }
+}
