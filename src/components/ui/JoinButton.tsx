@@ -3,12 +3,12 @@ import styled from "styled-components";
 
 const StyledWrapper = styled.div`
   .button {
-    --white: #ffe7ff;
-    --purple-100: #f4b1fd;
-    --purple-200: #d190ff;
-    --purple-300: #c389f2;
-    --purple-400: #8e26e2;
-    --purple-500: #5e2b83;
+    --white: #e0fffe;
+    --purple-100: #99f6e4;
+    --purple-200: #2dd4bf;
+    --purple-300: #14b8a6;
+    --purple-400: #0d9488;
+    --purple-500: #0f766e;
     --radius: 18px;
     border-radius: var(--radius);
     outline: none;
@@ -200,7 +200,7 @@ const StyledWrapper = styled.div`
     stroke-dasharray: 60 60;
     stroke-dashoffset: 60;
     transform: translate(-17%, -31%);
-    stroke: var(--purple-300);
+    stroke: var(--purple-200);
   }
   .button:hover .char.state-1 span::before {
     animation: charAppear 0.7s ease calc(var(--i) * 0.03s);
@@ -283,7 +283,7 @@ const StyledWrapper = styled.div`
   }
   @keyframes path {
     from { stroke: white; }
-    to   { stroke-dashoffset: -480; stroke: #f9c6fe; }
+    to   { stroke-dashoffset: -480; stroke: #5eead4; }
   }
   @keyframes splash {
     to { stroke-dasharray: 2 60; stroke-dashoffset: -60; }
